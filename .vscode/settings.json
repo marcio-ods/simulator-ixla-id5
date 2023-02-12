@@ -1,0 +1,15 @@
+{
+    "deno.enable": true,
+    "editor.defaultFormatter": "denoland.vscode-deno",
+    "deno.suggest.imports.autoDiscover": true,
+    "cSpell.words": [
+        "dsdfsd",
+        "flipover",
+        "interfacestatus",
+        "laserstatus",
+        "loaddocument",
+        "makeloc",
+        "solenóide",
+        "transportstatus"
+    ]
+}

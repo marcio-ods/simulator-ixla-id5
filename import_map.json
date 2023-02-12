@@ -1,0 +1,20 @@
+{
+    "imports": {
+        "dist/": "./dist/",
+        "config/": "./src/config/",
+        "main/": "./src/main/",
+        "domain/": "./src/domain/",
+        "drivers/": "./src/drivers/",
+        "driven/": "./src/driven/",
+        "utils/": "./src/utils/",
+        "asserts": "https:/deno.land/std@0.165.0/testing/asserts.ts",
+        "slug": "https:/deno.land/x/slug@v1.0.0/mod.ts",
+        "base64": "https://denopkg.com/chiefbiiko/base64@master/mod.ts",
+        "tcp_socket": "https://deno.land/x/tcp_socket@0.0.2/mods.ts",
+        "fmt/": "https://deno.land/std@0.177.0/fmt/",
+        "datetime": "https://deno.land/std@0.177.0/datetime/mod.ts",
+        "path": "https://deno.land/std@0.177.0/path/mod.ts",
+        "@/": "./"
+    },
+    "scopes": {}
+}

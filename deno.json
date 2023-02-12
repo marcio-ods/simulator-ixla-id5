@@ -1,0 +1,60 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "main": " deno run -A --watch ./src/main/main.ts",
+    "dev": " deno run -A --watch ./src/main/main.ts",
+    "server": " deno run -A --watch ./src/main/server.ts",
+    "lint": " deno lint ",
+    "test": " deno test  -A",
+    "testw": " deno test  -A --watch",
+    "fmt": "deno fmt  --watch",
+    "cache": "deno cache --reload https://deno.land/x/tcp_socket@0.0.1/mods.ts"
+  },
+  "importMap": "./import_map.json",
+  "lint": {
+    "files": {
+      "include": [
+        "src/"
+      ],
+      "exclude": [
+        "dist/",
+        "DATA/",
+        "old/",
+        "doc/",
+        "docs/"
+      ]
+    },
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "include": [
+        "ban-untagged-todo"
+      ],
+      "exclude": [
+        "no-unused-vars"
+      ]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": [
+        "src/"
+      ]
+    },
+    "options": {
+      "useTabs": true,
+      "lineWidth": 80,
+      "indentWidth": 4,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [
+      "deno.window"
+    ],
+    "strict": true
+  }
+}
