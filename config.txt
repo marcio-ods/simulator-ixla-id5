@@ -6,6 +6,6 @@ IXLA_LOG_MESSAGES_LENGTH=100
 
 #time ms | Command | response erro | response 1 |  response 2 
 
-10 | <command name="getfonts" /> | <command name="getfonts" false/>|<command name="getfonts" asd asd asd />
+100 | <command name="getfonts" /> | <command name="getfonts" false/>|<command name="getfonts" asd asd asd />
 
-5 | <command name="reset" />| <command name="reset" false/>| <command name="reset" true/>| <command name="reset" executed=true/>
+2500 | <command name="reset" />| <command name="reset" false/>| <command name="reset" true/>| <command name="reset" executed=true/>

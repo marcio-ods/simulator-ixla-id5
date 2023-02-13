@@ -1,31 +1,20 @@
-import { assertArrayIncludes, assertEquals } from 'assert';
+import { assertArrayIncludes, assertEquals } from 'asserts';
 import { Bus, TOPICS } from 'domain/Bus/Bus.Entity.ts';
-import { CMDName } from 'utils';
 
-// const MSG = ["test1", "kkk", "deu ruim", "ok", "broadcast teste"]
-const arr = [
-	'topic-msg-from-id5',
-	'topic-id5-send-message',
-	'autoposition',
-	'topic-test',
-	'reset',
-];
 const MSG = [
-	...arr,
-	TOPICS.MsgFromId5,
-	TOPICS['id5-send-message'],
-	CMDName.Autoposition,
-	TOPICS.test,
-	CMDName.Reset,
+	TOPICS.WriteTheMessage,
+	TOPICS.receivedCmd,
 ];
 
 const testMsg = (msg: string) => {
 	assertEquals(msg, 'test1');
 	// console.log("1" + " " + msg)
 };
+
 const onBus = (msg: string) => {
 	assertArrayIncludes(MSG, [msg]);
 };
+
 const onBus2 = (msg: string) => {
 	assertArrayIncludes(MSG, [msg]);
 };
@@ -35,7 +24,7 @@ const onBus4 = (msg: string) => assertArrayIncludes(MSG, [msg]);
 Deno.test('Test bus', () => {
 	const bus = Bus.makeUnique();
 
-	const ID_test1 = bus.subscribe(TOPICS.MsgFromId5, onBus);
+	const ID_test1 = bus.subscribe(TOPICS.WriteTheMessage, onBus);
 
 	assertEquals(bus.channel.length, 1);
 	assertEquals(bus.channel[0].topic, 'topic-msg-from-id5');

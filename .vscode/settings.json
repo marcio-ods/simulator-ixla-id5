@@ -3,6 +3,7 @@
     "editor.defaultFormatter": "denoland.vscode-deno",
     "deno.suggest.imports.autoDiscover": true,
     "cSpell.words": [
+        "autoposition",
         "dsdfsd",
         "flipover",
         "interfacestatus",

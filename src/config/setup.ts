@@ -1,7 +1,7 @@
 import { bgRed } from 'fmt/colors.ts';
 import { format } from 'path';
 
-type CMD = {
+export type CMD_SETUP = {
 	time: number;
 	cmd: string;
 	erro: string;
@@ -13,7 +13,7 @@ type Config = {
 	IXLA_LOG_MESSAGES_LENGTH: number;
 	IXLA_PORT: string;
 	IXLA_HOSTNAME: string;
-	commands: CMD[];
+	commands: CMD_SETUP[];
 };
 
 const SETUP = {} as Config;
@@ -45,7 +45,7 @@ const txtToJson = (txt: string) => {
 		.filter((f) => f.includes('<command'))
 		.map((m) => m.split('|').map((m2) => m2.trim()))
 		.map((m) => {
-			const resp: CMD = {
+			const resp: CMD_SETUP = {
 				time: Number(m[0]),
 				cmd: m[1],
 				erro: m[2],
